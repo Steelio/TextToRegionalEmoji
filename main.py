@@ -1,4 +1,3 @@
-import subprocess
 char_to_emoji = {
     'a': ':regional_indicator_a:',
     'b': ':regional_indicator_b:',
@@ -27,6 +26,7 @@ char_to_emoji = {
     'y': ':regional_indicator_y:',
     'z': ':regional_indicator_z:',
 }
+import subprocess
 def ironmaceHatesMe(text):
     text = text.lower()  # Convert text to lowercase
     lines = text.split('|')  # Split text into lines at '|' characters
@@ -45,3 +45,4 @@ def ironmaceHatesMe(text):
 if __name__ == '__main__':
     out = ironmaceHatesMe(input('Text: '))
     subprocess.run('clip', input=out.encode('utf-8'), check=True)
+    print(f'Copied:\n{out}\nto your clipboard!')
